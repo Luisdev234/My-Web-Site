@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciclo Anual | Sitio Educativo</title>
+  <style>
+    /* === BASE GENERAL === */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f7fa;
+      color: #1e3d59;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* === NAV === */
+    nav {
+      background-color: #1e3d59;
+      color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 15px;
+      transition: background 0.3s ease, color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav ul li a:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    /* === CONTENIDO CENTRAL === */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #1e3d59;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .icono-construccion {
+      font-size: 6rem;
+      color: #ffcc00;
+      margin-bottom: 20px;
+      animation: balanceo 2s infinite ease-in-out;
+    }
+
+    @keyframes balanceo {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(8deg); }
+    }
+
+    .btn-volver {
+      background-color: #1e3d59;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-volver:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #1e3d59;
+      color: #fff;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="ciclos.html">Ciclos</a></li>
+      <li><a href="ciclo-anual.html">Ciclo Anual</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="icono-construccion">🚧</div>
+    <h1>Página en Construcción</h1>
+    <p>Estamos trabajando para ofrecerte pronto toda la información sobre el ciclo Semipresencial.</p>
+    <a href="index.html" class="btn-volver">Volver al Inicio</a>
+  </main>
+
+  <footer>
+    &copy; 2025 | Sitio Educativo. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
