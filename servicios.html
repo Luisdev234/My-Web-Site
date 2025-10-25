@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios - ALTA MENTE</title>
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+/* ======== ESTILOS GENERALES ======== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fc;
+  color: #333;
+}
+
+/* ======== ENCABEZADO ======== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1e3d59, #3a6ea5);
+  padding: 10px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  height: 70px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background: #ffcc00;
+  color: #000;
+  transform: scale(1.08);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* ======== SECCIÓN SERVICIOS ======== */
+.servicios {
+  text-align: center;
+  padding: 60px 20px 90px;
+  background: #f9f9f9;
+}
+
+.servicios h2 {
+  font-size: 2.3rem;
+  color: #1e3d59;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.servicios h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: #ffcc00;
+  bottom: -10px;
+  left: 25%;
+}
+
+/* ======== CARDS ======== */
+.servicios-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.servicio {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 330px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.servicio:hover {
+  transform: scale(1.07) translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.servicio img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.servicio:hover img {
+  transform: scale(1.1);
+}
+
+.servicio h3 {
+  font-size: 1.3em;
+  color: #1e3d59;
+  margin: 20px 0 10px;
+}
+
+.servicio p {
+  font-size: 1em;
+  color: #555;
+  padding: 0 20px 25px;
+  line-height: 1.6;
+}
+
+/* Botón de acción */
+.btn-servicio {
+  display: inline-block;
+  background: #1e3d59;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.btn-servicio:hover {
+  background: #ffcc00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ======== PIE DE PÁGINA ======== */
+footer {
+  background: #1e3d59;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+<header>
+ <div class="logo-texto">
+    <img src="assets/images/buhito.png" alt="Logo Alta Mente" class="logo">
+    <div class="texto-logo">
+      <h1>ALTA MENTE</h1>
+      <p>Academia Preuniversitaria</p>
+    </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="ciclos.html">Ciclos</a></li>
+            <li><a href="aula.html">Aula Virtual</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+  <section class="servicios">
+    <h2>Servicios Académicos</h2>
+
+    <div class="servicios-container">
+      <!-- Simulacros -->
+      <div class="servicio">
+        <img src="assets/images/servicio1.jpg" alt="Simulacros">
+        <h3>Simulacros de Admisión</h3>
+        <p>Recreamos las condiciones reales del examen de admisión para que te familiarices con el formato, el tiempo y la presión del proceso. Recibe resultados detallados y orientación personalizada para mejorar tu rendimiento.</p>
+        <a href="#" class="btn-servicio">Ver próximos simulacros</a>
+      </div>
+
+      <!-- Tutorías -->
+      <div class="servicio">
+        <img src="assets/images/servicios2.jpg" alt="Tutorías Personalizadas">
+        <h3>Tutorías Personalizadas</h3>
+        <p>Nuestros tutores especializados te acompañan en sesiones uno a uno, adaptadas a tus necesidades. Refuerza tus puntos débiles y desarrolla estrategias efectivas para dominar cada área académica.</p>
+        <a href="#" class="btn-servicio">Solicitar tutoría</a>
+      </div>
+
+      <!-- Orientación -->
+      <div class="servicio">
+        <img src="assets/images/servicios3.jpg" alt="Orientación Académica">
+        <h3>Orientación Vocacional y Académica</h3>
+        <p>Contamos con psicólogos y orientadores que te ayudarán a descubrir tus talentos, intereses y perfil profesional, guiándote hacia la carrera universitaria ideal según tus fortalezas y aspiraciones.</p>
+        <a href="#" class="btn-servicio">Agendar asesoría</a>
+      </div>
+
+      <!-- Plataforma Virtual -->
+      <div class="servicio">
+        <img src="assets/images/aulavirtual2.jpg" alt="Plataforma Virtual">
+        <h3>Plataforma Virtual Interactiva</h3>
+        <p>Accede a clases grabadas, materiales descargables, foros y evaluaciones en línea desde cualquier lugar. Nuestra plataforma está diseñada para ofrecerte una experiencia de aprendizaje moderna y flexible.</p>
+        <a href="aula.html" class="btn-servicio">Ir al Aula Virtual</a>
+      </div>
+
+      <!-- Seguimiento y Coaching -->
+      <div class="servicio">
+        <img src="assets/images/servicios5.jpg" alt="Coaching Académico">
+        <h3>Coaching y Seguimiento Académico</h3>
+        <p>Te acompañamos durante todo tu proceso con reportes de progreso, retroalimentación continua y sesiones motivacionales que fortalecen tu disciplina y confianza para alcanzar el éxito.</p>
+        <a href="#" class="btn-servicio">Conoce más</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 ALTA MENTE – Academia Preuniversitaria</p>
+</footer>
+</body>
+</html>

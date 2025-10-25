@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto - ALTA MENTE</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* ======= ESTILOS GENERALES ======= */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f8fa;
+  color: #333;
+}
+
+/* ======= ENCABEZADO ======= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1e3d59, #3a6ea5);
+  padding: 10px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  height: 70px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+nav ul li a:hover {
+  background: #ffcc00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ======= SECCIÓN DE CONTACTO ======= */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 40px 20px;
+}
+
+.contacto {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  padding: 40px 60px;
+  max-width: 600px;
+  text-align: center; /* 👈 Esto centra todo dentro */
+  margin: 0 auto; /* centra el contenedor en la página */
+}
+
+.contacto h2 {
+  color: #1b263b;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #ffcc00;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.contacto p {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  color: #444;
+}
+
+.contacto p i {
+  color: #ffcc00;
+  margin-right: 8px;
+}
+
+/* ======= PIE DE PÁGINA ======= */
+footer {
+  background: #1b263b;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+.img-contacto {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 130px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25); /* 👈 sombra envolvente inicial */
+  transition: all 0.4s ease; /* suaviza el efecto al pasar el mouse */
+}
+
+.img-contacto:hover {
+  transform: scale(1.4); /* 👈 agranda ligeramente la imagen */
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.6); /* 👈 sombra dorada brillante */
+}
+</style>
+</head>
+
+<body>
+<header>
+   <div class="logo-texto">
+    <img src="assets/images/buhito.png" alt="Logo Alta Mente" class="logo">
+    <div class="texto-logo">
+      <h1>ALTA MENTE</h1>
+      <p>Academia Preuniversitaria</p>
+    </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="ciclos.html">Ciclos</a></li>
+            <li><a href="aula.html">Aula Virtual</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<section class="contacto">
+    <img src="assets/images/buhito.png" alt="Contáctanos" class="img-contacto">
+    <h2>Contáctanos</h2>
+    <p><i class="fas fa-envelope"></i> Email: <strong>info@altamente.edu.pe</strong></p>
+    <p><i class="fas fa-phone"></i> Teléfono: <strong>+51 987 654 321</strong></p>
+    <p><i class="fas fa-map-marker-alt"></i> Dirección: <strong>Av. Ejemplo 123, Lima, Perú</strong></p>
+</section>
+</main>
+
+<footer>
+<p>© 2025 ALTA MENTE – Academia Preuniversitaria. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Íconos de Font Awesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

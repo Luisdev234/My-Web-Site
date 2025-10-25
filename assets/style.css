@@ -1,0 +1,321 @@
+/* === BASE GENERAL === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* === ENCABEZADO === */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #1e3d59, #3a6ea5);
+    padding: 10px 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.logo-texto {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    height: 65px;
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+    margin-right: 15px;
+}
+
+.texto-logo h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: 'Arial', sans-serif;
+}
+
+.texto-logo p {
+    color: #f0f0f0;
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* === NAVEGACIÓN === */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* === MENÚ DESPLEGABLE COHERENTE === */
+/* Contenedor del dropdown */
+/* Contenedor del dropdown */
+/* === SUBMENU VERTICAL CORRECTO === */
+nav ul li.dropdown {
+    position: relative;
+}
+
+/* Contenedor del submenu */
+nav ul li .submenu {
+    position: absolute;
+    top: 100%;               /* justo debajo del li padre */
+    left: 0;
+    min-width: 220px;        /* ancho del submenu */
+    background: linear-gradient(90deg, #1e3d59, #3a6ea5);
+    border-radius: 0 0 10px 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); 
+    transition: all 0.3s ease;
+    z-index: 100;
+    display: block;          /* items verticales */
+}
+
+/* Cada li ocupa todo el ancho */
+nav ul li .submenu li {
+    width: 100%;
+}
+
+/* Links dentro del submenu */
+nav ul li .submenu a {
+    display: block;           /* ocupa todo el li */
+    width: 100%;
+    padding: 12px 0;          /* espacio vertical */
+    text-align: center;       /* centra horizontalmente */
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-sizing: border-box;   /* padding incluido en ancho */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Hover sin sobresalir del submenu */
+nav ul li .submenu a:hover {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+/* Mostrar submenu al hover */
+nav ul li.dropdown:hover > .submenu,
+nav ul li.dropdown.open > .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Flecha giratoria al desplegar */
+nav ul li.dropdown > a i {
+    margin-left: 6px;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+nav ul li.dropdown:hover > a i,
+nav ul li.dropdown.open > a i {
+    transform: rotate(180deg);
+}
+
+
+/* === CARRUSEL === */
+.carrusel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 400px;
+}
+
+.carrusel .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carrusel .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrusel .active {
+    display: block;
+}
+
+.carrusel button.prev,
+.carrusel button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(30, 61, 89, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background 0.3s ease;
+}
+
+.carrusel button.prev:hover,
+.carrusel button.next:hover {
+    background-color: rgba(58, 110, 165, 0.9);
+}
+
+.carrusel button.prev {
+    left: 10px;
+}
+
+.carrusel button.next {
+    right: 10px;
+}
+
+/* === SECCIÓN BIENVENIDA === */
+.bienvenida {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f0f4f8;
+    animation: fadeIn 1.2s ease;
+}
+
+.bienvenida h1 {
+    color: #1e3d59;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.bienvenida p {
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.resaltado {
+    color: #3a6ea5;
+    font-weight: bold;
+}
+
+/* === BOTONES === */
+.btn-principal, .btn-secundario {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    margin-top: 1rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-principal {
+    background-color: #1e3d59;
+    color: #fff;
+}
+
+.btn-principal:hover {
+    background-color: #3a6ea5;
+    transform: scale(1.05);
+}
+
+.btn-secundario {
+    background-color: #3a6ea5;
+    color: #fff;
+}
+
+.btn-secundario:hover {
+    background-color: #1e3d59;
+    transform: scale(1.05);
+}
+
+/* === PIE DE PÁGINA === */
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: linear-gradient(90deg, #1e3d59, #3a6ea5);
+    color: #fff;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-contenido p {
+    margin: 8px 0;
+    font-size: 0.95rem;
+}
+
+/* === ÍCONOS DE REDES SOCIALES === */
+.redes-sociales {
+    margin-top: 15px;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.4rem;
+    color: #ffcc00;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+.redes-sociales a.facebook:hover { color: #1877F2; }
+.redes-sociales a.instagram:hover { color: #E4405F; }
+.redes-sociales a.tiktok:hover { color: #69C9D0; }
+.redes-sociales a.youtube:hover { color: #FF0000; }
+
+/* === ANIMACIONES === */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+

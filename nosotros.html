@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros - ALTA MENTE</title>
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+/* ======== ESTILOS GENERALES ======== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+/* ======== ENCABEZADO ======== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1e3d59, #3a6ea5);
+  padding: 10px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  height: 70px;
+}
+
+.logo-texto {
+  display: flex;
+  align-items: center;
+}
+
+.texto-logo {
+  margin-left: 10px;
+  color: #fff;
+}
+
+.texto-logo h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.texto-logo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ffcc00;
+}
+
+/* ======== NAVBAR ======== */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+nav ul li a:hover {
+  background: #ffcc00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
+main {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 2rem;
+  color: #1b263b;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+main h2::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  background: #ffcc00;
+  bottom: -10px;
+  left: 25%;
+}
+
+/* ======== CONTENEDOR DE CARDS ======== */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap; /* 🔹 Todas las cards en una fila */
+  gap: 25px;
+  padding: 20px 60px;
+  background: linear-gradient(180deg, #f5f6fa 0%, #e6ebf1 100%);
+  overflow: hidden; /* 🔹 Evita el scroll horizontal */
+  box-sizing: border-box;
+}
+
+.card {
+  flex: 1; /* 🔹 Cada card ocupa un espacio igual */
+  min-width: 240px;
+  max-width: 300px;
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transform: scale(1);
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.9);
+}
+
+.card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.card h3 {
+  font-size: 1.3em;
+  color: #003366;
+  margin: 15px 0 10px;
+}
+
+.card p {
+  font-size: 0.95em;
+  color: #555;
+  padding: 0 20px 20px;
+  line-height: 1.6;
+}
+
+/* ======== PIE DE PÁGINA ======== */
+footer {
+  background: #1b263b;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo-texto">
+    <img src="assets/images/buhito.png" alt="Logo Alta Mente" class="logo">
+    <div class="texto-logo">
+      <h1>ALTA MENTE</h1>
+      <p>Academia Preuniversitaria</p>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="ciclos.html">Ciclos</a></li>
+      <li><a href="aula.html">Aula Virtual</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h2>Nosotros</h2>
+
+  <div class="cards-container">
+    <div class="card">
+      <img src="assets/images/profe.jpg" alt="Equipo docente">
+      <h3>Equipo Docente</h3>
+      <p>Contamos con profesores especializados para cada universidad, comprometidos con tu éxito académico.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/aula.jpg" alt="Campus">
+      <h3>Campus Moderno</h3>
+      <p>Ambientes cómodos, aulas tecnológicas y espacios inspiradores diseñados para potenciar tu aprendizaje.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/valores.jpg" alt="Valores">
+      <h3>Nuestros Valores</h3>
+      <p>Fomentamos la excelencia, la perseverancia y la integridad como pilares del crecimiento estudiantil.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/images/mision.jpg" alt="Misión y Visión">
+      <h3>Misión y Visión</h3>
+      <p>Nuestra misión es guiarte hacia tu ingreso universitario con una visión integral y formativa.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 ALTA MENTE – Academia Preuniversitaria</p>
+</footer>
+</body>
+</html>

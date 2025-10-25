@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aula Virtual - ALTA MENTE</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* ======== ESTILOS GENERALES ======== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fc;
+  color: #333;
+}
+
+/* ======== ENCABEZADO ======== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1e3d59, #3a6ea5);
+  padding: 10px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  height: 70px;
+}
+
+.logo-texto {
+  display: flex;
+  align-items: center;
+}
+
+.texto-logo {
+  margin-left: 10px;
+  color: #fff;
+}
+
+.texto-logo h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.texto-logo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ffcc00;
+}
+
+/* ======== NAVBAR ======== */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+nav ul li a:hover {
+  background: #ffcc00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ======== CONTENEDOR DEL LOGIN ======== */
+main {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aula-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, #f5f6fa 0%, #e6ebf1 100%);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 380px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.aula-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.aula-container img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.aula-container input {
+  width: 85%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+.aula-container button {
+  margin-top: 15px;
+  background: linear-gradient(90deg, #ffcc00, #ffdd44);
+  border: none;
+  padding: 12px 40px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  color: #1b263b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aula-container button:hover {
+  background: #ffd700;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.5);
+}
+
+/* ======== PIE DE PÁGINA ======== */
+footer {
+  background: #1b263b;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo-texto">
+    <img src="assets/images/buhito.png" alt="Logo Alta Mente" class="logo">
+    <div class="texto-logo">
+      <h1>ALTA MENTE</h1>
+      <p>Academia Preuniversitaria</p>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="ciclos.html">Ciclos</a></li>
+     <li><a href="aula.html">Aula Virtual</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="aula-container">
+    <img src="assets/images/aulavirtual2.jpg" alt="Aula Virtual">
+    <input type="text" placeholder="Usuario">
+    <input type="password" placeholder="Contraseña">
+    <button>Ingresar</button>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 ALTA MENTE – Academia Preuniversitaria</p>
+</footer>
+</body>
+</html>
