@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ciclo Anual | Sitio Educativo</title>
+  <title>Ciclo Anual | Alta Mente</title>
   <style>
     /* === BASE GENERAL === */
     body {
@@ -16,21 +16,52 @@
       min-height: 100vh;
     }
 
-    /* === NAV === */
-    nav {
-      background-color: #1e3d59;
+    /* === ENCABEZADO CON LOGO IZQUIERDO Y MENÚ DERECHO === */
+    header {
+      background: linear-gradient(90deg, #1e3d59 0%, #2a5b87 50%, #3a7ca5 100%);
       color: #fff;
-      padding: 15px 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      padding: 6px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     }
 
+    /* === LOGO Y TEXTO === */
+    .logo-texto {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 52px; /* 🔧 Tamaño ligeramente reducido */
+      height: auto;
+    }
+
+    .texto-logo h1 {
+      margin: 0;
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .texto-logo p {
+      margin: 0;
+      font-size: 0.85rem;
+      color: #e3e3e3;
+    }
+
+    /* === NAVBAR === */
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center;
+      align-items: center;
       gap: 25px;
+      flex-wrap: wrap;
     }
 
     nav ul li {
@@ -41,13 +72,51 @@
       color: #fff;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1.15rem; /* 🔠 Aumentado ligeramente */
       padding: 8px 15px;
+      border-radius: 6px;
       transition: background 0.3s ease, color 0.3s ease;
-      border-radius: 5px;
     }
 
     nav ul li a:hover {
       background-color: #ffcc00;
+      color: #000;
+    }
+
+    /* === SUBMENÚ === */
+    .dropdown:hover .submenu {
+      display: block;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #2a5b87;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      padding: 8px 0;
+      min-width: 170px;
+      z-index: 10;
+      overflow: hidden; /* 🔒 Evita desbordes visuales */
+    }
+
+    .submenu li {
+      text-align: center;
+    }
+
+    .submenu li a {
+      display: block;
+      padding: 10px 20px;
+      color: #fff;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .submenu li a:hover {
+      background: #ffcc00;
       color: #000;
     }
 
@@ -59,19 +128,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 40px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      color: #1e3d59;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 30px;
+      padding: 60px 20px;
     }
 
     .icono-construccion {
@@ -83,56 +140,104 @@
 
     @keyframes balanceo {
       0%, 100% { transform: rotate(0deg); }
-      50% { transform: rotate(8deg); }
+      50% { transform: rotate(6deg); }
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #1e3d59;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 30px;
+      max-width: 600px;
     }
 
     .btn-volver {
-      background-color: #1e3d59;
+      background: linear-gradient(90deg, #1e3d59 0%, #2a5b87 100%);
       color: #fff;
-      padding: 10px 20px;
+      padding: 10px 25px;
       border: none;
       border-radius: 6px;
       font-size: 1rem;
       font-weight: 600;
-      cursor: pointer;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
 
     .btn-volver:hover {
-      background-color: #ffcc00;
+      background: #ffcc00;
       color: #000;
     }
 
+    /* === FOOTER === */
     footer {
       text-align: center;
       padding: 15px;
-      background-color: #1e3d59;
+      background: linear-gradient(90deg, #1e3d59 0%, #2a5b87 50%, #3a7ca5 100%);
       color: #fff;
       font-size: 0.9rem;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        justify-content: center;
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="ciclos.html">Ciclos</a></li>
-      <li><a href="ciclo-anual.html">Ciclo Anual</a></li>
-      <li><a href="#">Contacto</a></li>
-    </ul>
-  </nav>
+  <header>
+    <div class="logo-texto">
+      <img src="assets/images/buhito.png" alt="Logo Alta Mente" class="logo">
+      <div class="texto-logo">
+        <h1>ALTA MENTE</h1>
+        <p>Academia Preuniversitaria</p>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li class="dropdown">
+          <a href="#">Ciclos</a>
+          <ul class="submenu">
+            <li><a href="ciclo-verano.html">Ciclo Verano</a></li>
+            <li><a href="ciclo-anual.html">Ciclo Anual</a></li>
+            <li><a href="ciclo-intensivo.html">Ciclo Intensivo</a></li>
+            <li><a href="ciclo-semi.html">Ciclo Semipresencial</a></li>
+          </ul>
+        </li>
+        <li><a href="aula.html">Aula Virtual</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <div class="icono-construccion">🚧</div>
-    <h1>Página en Construcción</h1>
-    <p>Estamos trabajando para ofrecerte pronto toda la información sobre el ciclo anual.</p>
+    <h2>Página en Construcción</h2>
+    <p>Estamos trabajando para ofrecerte toda la información sobre el ciclo anual.<br>
+    Vuelve pronto para descubrir las novedades.</p>
     <a href="index.html" class="btn-volver">Volver al Inicio</a>
   </main>
 
   <footer>
-    &copy; 2025 | Sitio Educativo. Todos los derechos reservados.
+    &copy; 2025 | Alta Mente. Todos los derechos reservados.
   </footer>
 
 </body>
