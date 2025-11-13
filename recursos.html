@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recursos - ALTA MENTE</title>
+<link rel="stylesheet" href="assets/style.css">
+
+<style>
+/* ======== ESTILOS GENERALES ======== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* ======== ENCABEZADO ======== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #1e3d59, #3a6ea5);
+  padding: 10px 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  height: 70px;
+}
+
+.logo-texto {
+  display: flex;
+  align-items: center;
+}
+
+.texto-logo {
+  margin-left: 10px;
+  color: #fff;
+}
+
+.texto-logo h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.texto-logo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ffcc00;
+}
+
+/* ======== NAVBAR ======== */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+nav ul li a:hover {
+  background: #ffcc00;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* ======== SECCIÓN VIDEOS ======== */
+.videos {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #f5f6fa 0%, #e6ebf1 100%);
+}
+
+.videos h2 {
+  font-size: 2rem;
+  color: #1b263b;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.video-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.video-item {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.video-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.video-item a {
+  display: block;
+  padding: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #003366;
+  background: #ffcc00;
+  transition: background 0.3s, color 0.3s;
+}
+
+.video-item a:hover {
+  background: #003366;
+  color: #fff;
+}
+
+/* ======== SECCIÓN MATERIALES PDF ======== */
+.materiales {
+  padding: 50px 20px;
+  background: #fefefe;
+  text-align: center;
+}
+
+.materiales h2 {
+  font-size: 2rem;
+  color: #1b263b;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.pdf-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.pdf-item {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 220px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.pdf-item:hover {
+  transform: scale(1.05);
+}
+
+.pdf-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.pdf-item a {
+  display: block;
+  background: #3a6ea5;
+  color: #fff;
+  padding: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pdf-item a:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* ======== SECCIÓN WEBS EDUCATIVAS ======== */
+.webs {
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #e6ebf1 0%, #f5f6fa 100%);
+  text-align: center;
+}
+
+.webs h2 {
+  font-size: 2rem;
+  color: #1b263b;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.web-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.web-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 220px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.web-item:hover {
+  transform: scale(1.05);
+}
+
+.web-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: #f0f4f8;
+}
+
+.web-item a {
+  display: block;
+  background: #1e3d59;
+  color: #fff;
+  padding: 10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.web-item a:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* ======== PIE DE PÁGINA ======== */
+footer {
+  background: #1b263b;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="logo-texto">
+    <img src="assets/images/buhito.png" alt="Logo Alta Mente" class="logo">
+    <div class="texto-logo">
+      <h1>ALTA MENTE</h1>
+      <p>Academia Preuniversitaria</p>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="ciclos.html">Ciclos</a></li>
+      <li><a href="aula.html">Aula Virtual</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="recursos.html">Recursos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ======== SECCIÓN VIDEOS ======== -->
+<section class="videos">
+  <h2>Recursos en Video</h2>
+  <div class="video-gallery">
+    <div class="video-item">
+      <img src="assets/images/logica.png" alt="Lógica Proposicional">
+      <a href="https://www.youtube.com/watch?v=vKe0UKSpNQQ&t=1s" target="_blank">Lógica Proposicional</a>
+    </div>
+    <div class="video-item">
+      <img src="assets/images/razonamiento.png" alt="Razonamiento Matemático">
+      <a href="https://www.youtube.com/watch?v=vDcFs0oqUfY" target="_blank">Razonamiento Matemático</a>
+    </div>
+    <div class="video-item">
+      <img src="assets/images/icosaedro.png" alt="Geometria Espacial">
+      <a href="https://www.youtube.com/watch?v=ivD0PKqtxzU" target="_blank">Poliedros Regulares</a>
+    </div>
+    <div class="video-item">
+      <img src="assets/images/fisica.png" alt="Física Básica">
+      <a href="https://www.youtube.com/watch?v=1HclptFm4wE" target="_blank">Dinamica Lineal</a>
+    </div>
+    <div class="video-item">
+      <img src="assets/images/quimica.png" alt="Química General">
+      <a href="https://www.youtube.com/watch?v=K09kfBHmjmg" target="_blank">Química General</a>
+    </div>
+    <div class="video-item">
+      <img src="assets/images/biologia.png" alt="Biología Celular">
+      <a href="https://www.youtube.com/watch?v=PpZGhh4-rTQ" target="_blank">Biología Celular</a>
+    </div>
+    <div class="video-item">
+      <img src="assets/images/seno.png" alt="Funcion Senoidal">
+      <a href="https://www.youtube.com/watch?v=XH3htlWU9N4" target="_blank">Funciones Trigonometricas</a>
+    </div>
+    <div class="video-item">
+      <img src="assets/images/interes.png" alt="Interes Simple">
+      <a href="https://www.youtube.com/watch?v=4MgDq1_JrBs" target="_blank">Matematica Financiera</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======== SECCIÓN MATERIALES PDF ======== -->
+<section class="materiales">
+  <h2>Materiales PDF</h2>
+  <div class="pdf-gallery">
+    <div class="pdf-item">
+      <img src="assets/images/mir.png" alt="Libros MIR MOSCU">
+      <a href="https://drive.google.com/drive/folders/1gvVks2jrVFB3TyjTmNPJSlNp5zA3mOnJ" target="_blank">Libros MIR MOSCU</a>
+    </div>
+    <div class="pdf-item">
+      <img src="assets/images/folletos.png" alt="Folletos Pre">
+      <a href="https://drive.google.com/drive/folders/1oDRNu99lzXEdKAuUNKjd1N2B46XuvHMM" target="_blank">Folletos PreUniversitarios</a>
+    </div>
+    <div class="pdf-item">
+      <img src="assets/images/simulacro.png" alt="Simulacros Pasados">
+      <a href="https://drive.google.com/drive/folders/1sI9Wa4LLN6j8rVbnssdxq5lztiC_ERGs" target="_blank">Simulacros Pasados</a>
+    </div>
+    <div class="pdf-item">
+      <img src="assets/images/superacion.png" alt="Desarrollo Personal">
+      <a href="https://www.udocz.com/apuntes/317168/habitos-atomicos-pdf" target="_blank">Desarrollo Personal</a>
+    </div>
+    
+  </div>
+</section>
+
+<!-- ======== SECCIÓN WEBS EDUCATIVAS ======== -->
+<section class="webs">
+  <h2>Webs Educativas Recomendadas</h2>
+  <div class="web-gallery">
+    <div class="web-item">
+      <img src="assets/images/Leo.png" alt="Blog de Matematica">
+      <a href="https://blog.nekomath.com/" target="_blank">Blog de Leo</a>
+    </div>
+    <div class="web-item">
+      <img src="assets/images/symbolab.png" alt="Khan Academy">
+      <a href="https://es.symbolab.com/" target="_blank">Laboratorio  Matematicas</a>
+    </div>
+    <div class="web-item">
+      <img src="assets/images/phet.png" alt="Phet Interactivo">
+      <a href="https://phet.colorado.edu/es_PE/" target="_blank">Simulaciones Interactivas</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 ALTA MENTE – Academia Preuniversitaria</p>
+</footer>
+</body>
+</html>
+
+
